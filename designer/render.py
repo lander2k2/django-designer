@@ -12,7 +12,7 @@ def template(template_name):
 
     write_path = template_name.replace('.html', '_rendered.html')
 
-    with open('rendered_template.html', 'w') as f:
+    with open(write_path, 'w') as f:
         f.write(t.render(c))
 
     rendered_path = os.path.abspath(write_path)
