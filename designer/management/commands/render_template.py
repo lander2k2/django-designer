@@ -1,4 +1,5 @@
-from django.core.management.base import BaseCommand
+import os
+from django.core.management.base import BaseCommand, CommandError
 from designer.render import template
 
 class Command(BaseCommand):
@@ -6,5 +7,8 @@ class Command(BaseCommand):
     help = 'Renders templates into html files for designers.'
 
     def handle(self, *args, **options):
-        template(args[0])
+        if os.path.isfile(args[0]):
+            template(args[0])
+        else:
+            raise CommandError('Template "{0}" does not exist'.format(args[0]))
 
