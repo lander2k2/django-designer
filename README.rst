@@ -9,7 +9,7 @@ Designer's workflow:
 
 #. Pulls repo
 #. Edits template, makes it look pretty
-#. Runs django-designer function to render template and produce html file
+#. Runs manage.py command to render template and produce html file
 #. Points browser to file
 #. Views pretty rendered template in browser
 #. Repeats steps 2 and 3, refreshes browser
@@ -31,9 +31,7 @@ Usage
 -----
 Run::
 
-    $ ./manage.py shell
-    >>> from designer.render import template
-    >>> template('your_app/templates/home.html')
+    $ ./manage.py render_template your_app/templates/home.html
     file:///Users/you/Projects/your_project/your_app/templates/home_rendered.html
 
 Copy-paste output into browser address bar and view rendered template.
