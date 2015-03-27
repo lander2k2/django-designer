@@ -1,9 +1,9 @@
 from setuptools import setup, find_packages
 
 setup(name='django-designer',
-      version='0.1.2',
+      version='0.2',
       description='Django template renderer for designers',
-      url='',
+      url='https://github.com/lander2k2/django-designer',
       author='Richard Lander',
       author_email='lander2k2@gmail.com',
       license='MIT',
