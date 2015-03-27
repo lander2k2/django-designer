@@ -6,6 +6,7 @@ Allow designers to work on your templates without having to run
 the Django development server, database etc.
 
 Designers workflow:
+
 #. Pulls repo
 #. Edits template to make it look pretty
 #. Runs django-designer funcion to render template and produce html file
@@ -28,7 +29,8 @@ Install package::
 -----
 Usage
 -----
-::
+Run::
+
     $ ./manage.py shell
     >>> from designer.render import template
     >>> template('your_app/templates/home.html')
